@@ -1,4 +1,4 @@
-## QEasyChain 私链自动部署环境
+## EthDPos 私链自动部署环境
 ### 环境使用
 
 主要由两个总入口shell
