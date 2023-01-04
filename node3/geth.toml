@@ -1,0 +1,61 @@
+[Eth]
+SyncMode = "full"
+TrieCleanCacheRejournal= 300000000000
+TrieTimeout = 20000000000
+RPCTxFeeCap = 6.0
+
+[Eth.Miner]
+GasFloor = 50000000
+GasCeil = 100000000
+GasPrice = 100000000000
+Recommit = 3000000000
+Noverify = false
+
+[Eth.GPO]
+Blocks = 6
+
+[Eth.TxPool]
+NoLocals = false
+Journal = "transactions.rlp"
+Rejournal = 600000000000
+PriceLimit = 100000000000
+PriceBump = 10
+AccountSlots = 64
+GlobalSlots = 10240
+AccountQueue = 32
+GlobalQueue = 1024
+Lifetime = 1800000000000
+
+[Node]
+DataDir = "./data"
+InsecureUnlockAllowed = true
+NoUSB = true
+IPCPath = "geth.ipc"
+HTTPHost = "127.0.0.1"
+HTTPPort = 8345
+HTTPCors = ["*"]
+HTTPVirtualHosts = ["*"]
+HTTPModules = ['eth', 'net', 'web3']
+
+WSHost = "127.0.0.1"
+WSPort = 8346
+WSModules = ['eth', 'net', 'web3']
+WSOrigins = ["*"]
+
+GraphQLVirtualHosts = ["localhost"]
+
+
+[Node.P2P]
+MaxPeers = 50
+NoDiscovery = true
+
+StaticNodes=["enode://dd78d80d969c504a130ab3abb59838f8bcd07484fa44675a419d3549b1dec571c9e4636b1497a2b5f157701c80a1dfb85e21b4b627a770d0e1579f485d0737f1@127.0.0.1:32661","enode://3953dc5c938d54ab011d6664c3352d6f1c442292637e2a75c4b6efa114e005ff492d6fa25ee1e31df2034f3b98c3b3a32ffc0ed77c9207f70ebf8f1cbfe98ca7@127.0.0.1:32662"]
+BootstrapNodes = ["enode://32821e6ff0e176b78d95f321c0739db895d3a978ca3826c9215e7b38b3181e82b64e1083a0691eefb42947e472791abd979675674aed23c310a10cfb321edc74@127.0.0.1:32664"]
+
+ListenAddr = ":32663"
+EnableMsgEvents = false
+
+[Node.HTTPTimeouts]
+ReadTimeout = 30000000000
+WriteTimeout = 30000000000
+IdleTimeout = 120000000000
